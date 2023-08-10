@@ -30,7 +30,6 @@ const getAllCompounds = async (req, res) => {
     if (error instanceof HTTPError) {
       res.status(error.code).json({ message: error.message });
     } else {
-      console.log(error);
       res.status(500).json({ message: "Internal Server Error" });
     }
   }
@@ -39,7 +38,6 @@ const getAllCompounds = async (req, res) => {
 const updateCompound = async (req, res) => {
   try {
     const data = req.body;
-    console.log("body", data);
     const { id } = req.params;
     const content = await compoundService.updateCompound(id, data);
     res.status(200).json(content);
@@ -47,7 +45,6 @@ const updateCompound = async (req, res) => {
     if (error instanceof HTTPError) {
       res.status(error.code).json({ message: error.message });
     } else {
-      console.log(error);
       res.status(500).json({ message: "Internal Server Error" });
     }
   }

@@ -11,6 +11,11 @@
     <div class="heading" routerLink="/compounds" [queryParams]="{ page: 1 }">
       Compounds App
     </div>
-    <div class="right"></div>
+    <div class="right" (click)="showModalSerice.showModal = true">
+      <div>
+        <img src="../../../assets/add.png" height="25px" width="25px" />New
+        Compound
+      </div>
+    </div>
   </div>
 </div>

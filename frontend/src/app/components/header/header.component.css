@@ -15,7 +15,22 @@
   flex-grow: 1;
 }
 .right {
-  flex-grow: 2;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+.right > div {
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #28b81d;
+  color: white;
+  border-radius: 5px;
+}
+.right img {
+  margin-right: 5px;
 }
 .heading {
   cursor: pointer;

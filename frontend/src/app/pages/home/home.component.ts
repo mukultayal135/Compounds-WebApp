@@ -6,7 +6,6 @@ import {
   PagerType,
 } from 'src/app/models/compound-type';
 import { ActivatedRoute } from '@angular/router';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -20,8 +19,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private compoundService: CompoundsService,
-    private route: ActivatedRoute,
-    private router: Router
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {

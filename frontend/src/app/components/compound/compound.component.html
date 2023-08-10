@@ -1,6 +1,6 @@
 <div class="card">
   <div class="img-container">
-    <img [src]="compound.imageUrl" alt="" />
+    <img #image id="currentPhoto" [src]="compound.imageUrl" />
   </div>
   <div class="compound-name">{{ compound.compoundName }}</div>
   <div class="operation-button">

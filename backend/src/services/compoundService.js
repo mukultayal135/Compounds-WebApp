@@ -5,7 +5,7 @@ const createCompound = async (data) => {
   const result = await Compound.create({
     compoundName: data.compoundName,
     compoundDescription: data.compoundDescription,
-    imageUrl: data.compoundImageUrl,
+    imageUrl: data.imageUrl,
   });
   return result;
 };

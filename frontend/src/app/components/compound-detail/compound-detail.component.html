@@ -1,7 +1,7 @@
 <div class="container">
   <div class="card" *ngIf="compound !== undefined && compound !== null">
     <div class="img-container">
-      <img [src]="compound.imageUrl" alt="" />
+      <img id="currentPhoto" [src]="compound.imageUrl" alt="" />
     </div>
     <div
       class="compound-name"

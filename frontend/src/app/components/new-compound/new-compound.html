@@ -1,0 +1,79 @@
+<div
+  class="modal-overlay"
+  id="modal-overlay"
+  (click)="showModalService.showModal = false"
+></div>
+<div class="modal">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="heading">
+      <p>Add New Compound</p>
+      <img
+        src="../../../assets/cancel.png"
+        (click)="showModalService.showModal = false"
+      />
+    </div>
+    <div class="form-group">
+      <label>Compound Name</label>
+      <input
+        type="text"
+        name="name"
+        ngModel
+        #name="ngModel"
+        [ngClass]="{ warning: name.invalid && name.touched }"
+        placeholder="Enter the name of Compound"
+        class="form-control"
+        required
+      />
+      <div class="alert" *ngIf="name.touched && name.invalid">
+        Compound Name is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Compound Description</label>
+      <textarea
+        name="description"
+        ngModel
+        #description="ngModel"
+        [ngClass]="{ warning: description.touched && description.invalid }"
+        class="form-control"
+        rows="4"
+        placeholder="Enter description about the compound"
+        required
+      ></textarea>
+      <div class="alert" *ngIf="description.touched && description.invalid">
+        Compound Description is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Image URL</label>
+      <input
+        class="form-control"
+        type="url"
+        name="url"
+        #url="ngModel"
+        ngModel
+        placeholder="Entet the image URL"
+        required
+        pattern="https?:\/\/.*\.(?:png|jpg|svg|jpeg)"
+      />
+    </div>
+
+    <div class="alert" *ngIf="url.touched && url.invalid">
+      {{
+        url.errors?.['required']
+          ? "Image URL is required"
+          : "Image URL is invalid"
+      }}
+    </div>
+    <div class="button-container">
+      <button
+        type="submit"
+        [disabled]="f.invalid"
+        [ngClass]="{ disabled: f.invalid }"
+        value="Add"
+      >
+        Add
+      </button>
+    </div>
+  </form>
+</div>

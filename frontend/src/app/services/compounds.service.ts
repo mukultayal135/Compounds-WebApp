@@ -42,6 +42,12 @@ export class CompoundsService {
       .pipe(catchError((err) => this.handleError(err, null)));
   }
 
+  createCompound(data: any): Observable<CompoundType | null> {
+    return this.http
+      .post<CompoundType>(URL, data, httpOptions)
+      .pipe(catchError((err) => this.handleError(err, null)));
+  }
+
   handleError<Type>(err: HttpErrorResponse, fallBack: Type): Observable<Type> {
     let message;
     if (err.status == 0) {
