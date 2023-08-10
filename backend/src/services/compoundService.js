@@ -1,4 +1,4 @@
-const { Compound } = require("../../models");
+const { Compound } = require("../models");
 const HTTPError = require("../errors/HTTPError");
 
 const createCompound = async (data) => {
