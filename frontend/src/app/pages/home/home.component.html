@@ -1,0 +1,16 @@
+<div class="cards-container" *ngIf="allCompounds && allCompounds.length > 0">
+  <div *ngFor="let compound of allCompounds">
+    <app-compound
+      [compound]="compound"
+      (onDelete)="deleteCompound(compound.id)"
+    ></app-compound>
+  </div>
+</div>
+<app-pagination [pager]="pager"></app-pagination>
+<div class="cards-container" *ngIf="allCompounds && allCompounds.length == 0">
+  Compounds list is empty
+</div>
+<div class="empty" *ngIf="allCompounds === undefined">Loading.....</div>
+<div class="empty" *ngIf="allCompounds === null">
+  Compounds could not be loaded
+</div>

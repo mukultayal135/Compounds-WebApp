@@ -1,0 +1,57 @@
+.card {
+  height: 325px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 20px;
+  justify-content: space-between;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  background-color: whitesmoke;
+}
+.img-container {
+  height: 200px;
+  width: 100%;
+}
+.compound-name {
+  font-size: 1.5rem;
+}
+img {
+  height: 200px;
+  width: 100%;
+  object-fit: contain;
+}
+.operation-button {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.delete {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+}
+.delete-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.details {
+  width: 45%;
+  display: flex;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+}

@@ -1,0 +1,27 @@
+.nav-container {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: black;
+}
+.navbar {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.img-div {
+  flex-grow: 1;
+}
+.right {
+  flex-grow: 2;
+}
+.heading {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  margin: auto;
+  flex-grow: 1;
+}

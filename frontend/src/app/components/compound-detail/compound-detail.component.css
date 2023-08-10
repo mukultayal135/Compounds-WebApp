@@ -1,0 +1,89 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.card {
+  height: 550px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 20px;
+  justify-content: space-between;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  background-color: whitesmoke;
+}
+.img-container {
+  height: 250px;
+  width: 100%;
+}
+.compound-name {
+  font-size: 2rem;
+  min-width: 100%;
+  font-weight: bold;
+}
+.description {
+  min-width: 100%;
+  overflow-y: auto;
+  height: 150px;
+  font-size: 1.25rem;
+  color: #7f8c9b;
+}
+img {
+  height: 250px;
+  width: 100%;
+  object-fit: contain;
+}
+.operation-button {
+  height: 45px;
+  width: 100%;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: space-between;
+}
+.save {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: green;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+}
+
+.edit {
+  width: 50%;
+  display: flex;
+  color: #0077ff;
+  background-color: #e0efff;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+}
+
+.edit-icon {
+  margin-left: 10px;
+  height: 25px;
+  width: 25px;
+}
+.save-icon {
+  margin-left: 10px;
+  height: 25px;
+  width: 25px;
+}
+
+.focus {
+  outline: none;
+  box-shadow: 0 0 0 3px hsla(220, 100%, 50%, 80%);
+}
+.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}

@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="card" *ngIf="compound !== undefined && compound !== null">
+    <div class="img-container">
+      <img [src]="compound.imageUrl" alt="" />
+    </div>
+    <div
+      class="compound-name"
+      #compoundName
+      [attr.contenteditable]="editableEnabled"
+      [ngClass]="{ focus: editableEnabled }"
+    >
+      {{ compound.compoundName }}
+    </div>
+    <p
+      class="description"
+      #compoundDescription
+      [attr.contenteditable]="editableEnabled"
+      [ngClass]="{ focus: editableEnabled }"
+    >
+      {{ compound.compoundDescription }}
+    </p>
+    <div class="operation-button">
+      <div
+        class="edit button"
+        (click)="enableEditing()"
+        [ngClass]="{ disabled: editableEnabled }"
+      >
+        <p>Edit Details</p>
+        <img class="edit-icon" src="../../../assets/edit_8747675.png" />
+      </div>
+      <div
+        class="save button"
+        [ngClass]="{ disabled: !editableEnabled }"
+        (click)="
+          onSave(compoundName.textContent, compoundDescription.textContent)
+        "
+      >
+        <p>Save</p>
+        <img class="save-icon" src="../../../assets/save-as-48.ico" />
+      </div>
+    </div>
+  </div>
+  <div *ngIf="compound === undefined">Loading...</div>
+  <div *ngIf="compound === null">Compound Not Found</div>
+</div>

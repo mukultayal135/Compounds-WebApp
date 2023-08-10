@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="img-container">
+    <img [src]="compound.imageUrl" alt="" />
+  </div>
+  <div class="compound-name">{{ compound.compoundName }}</div>
+  <div class="operation-button">
+    <div class="details button" [routerLink]="['/compound', compound.id]">
+      <p>See Details</p>
+    </div>
+    <div class="delete button" (click)="deleteCompound(compound.id)">
+      <p>Delete</p>
+      <img
+        class="delete-icon"
+        src="../../../assets/icons8-delete-50.png"
+        alt=""
+      />
+    </div>
+  </div>
+</div>

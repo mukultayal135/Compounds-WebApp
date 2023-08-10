@@ -1,0 +1,17 @@
+.cards-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: space-evenly;
+  row-gap: 4rem;
+  column-gap: 3rem;
+  margin-top: 100px;
+}
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}

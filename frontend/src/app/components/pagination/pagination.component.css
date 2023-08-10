@@ -1,0 +1,43 @@
+.container {
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.pagination {
+  display: flex;
+  margin: auto;
+}
+
+.pagination a {
+  color: rgb(1, 124, 251);
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  background-color: whitesmoke;
+}
+
+.pagination a.active {
+  background-color: rgb(1, 124, 251);
+  color: white;
+  border: none;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.pagination a:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pagination a:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.disabled {
+  color: rgb(108, 117, 125) !important;
+  pointer-events: none;
+}

@@ -1,0 +1,35 @@
+<div class="container" *ngIf="pager && pager.pages && pager.pages.length">
+  <div class="pagination">
+    <a
+      routerLink="/compounds"
+      [queryParams]="{ page: 1 }"
+      [ngClass]="{ disabled: pager.currentPage === 1 }"
+      >First</a
+    >
+    <a
+      routerLink="/compounds"
+      [queryParams]="{ page: pager.currentPage - 1 }"
+      [ngClass]="{ disabled: pager.currentPage === 1 }"
+      ><<</a
+    >
+    <a
+      *ngFor="let page of pager.pages"
+      [ngClass]="{ active: pager.currentPage === page }"
+      routerLink="/compounds"
+      [queryParams]="{ page: page }"
+      >{{ page }}</a
+    >
+    <a
+      [ngClass]="{ disabled: pager.currentPage === pager.totalPages }"
+      routerLink="/compounds"
+      [queryParams]="{ page: pager.currentPage + 1 }"
+      >>></a
+    >
+    <a
+      routerLink="/compounds"
+      [queryParams]="{ page: pager.totalPages }"
+      [ngClass]="{ disabled: pager.currentPage === pager.totalPages }"
+      >Last</a
+    >
+  </div>
+</div>
